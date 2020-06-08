@@ -1,5 +1,7 @@
-const ENDPOINT = 'http://localhost:3001/phones';
+const HOST = 'http://localhost:3001';
+const PHONES_ENDPOINT = `${HOST}/phones`;
 
-const fetchPhones = () => fetch(ENDPOINT).then(response => response.json());
+const fetchPhones = () => fetch(PHONES_ENDPOINT).then(response => response.json());
 
-export { fetchPhones };
+export { HOST, fetchPhones };
+
