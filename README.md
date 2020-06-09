@@ -1,6 +1,6 @@
 # APP  
 This is an app to display a catalogue of phones and view its details.    
-## Installation  
+## Installation  
 In order to install the necessary dependencies for the project you should execute:    
 ```sh
 cd app-phones
@@ -15,7 +15,7 @@ npm start
 
 # SERVER  
 This is a server to get a catalogue of phones.    
-## Installation  
+## Installation  
 In order to install the necessary dependencies for the project you should execute:    
 ```sh
 cd server
