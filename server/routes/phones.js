@@ -1,7 +1,8 @@
 const express = require('express');
 
 const phonesRoutes = (app, fs) => {
-  const phones = './phone-catalogue/phones.json'
+  const phones = './phone-catalogue/phones.json';
+  const phoneImagesPath = 'phone-images';
 
   app.get('/phones', (req, res) => {
     fs.readFile(phones, "utf8", (err, data) => {
@@ -9,11 +10,14 @@ const phonesRoutes = (app, fs) => {
         throw err;
       }
 
-      res.send(JSON.parse(data));
+      const phones = JSON.parse(data).map((item) => Object.assign({}, item, {
+        imageFileName: `${phoneImagesPath}/${item.imageFileName}`
+      }));
+      res.send(phones);
     });
   });
 
-  app.use('/phone-images', express.static('./phone-catalogue/images'));
+  app.use(`/${phoneImagesPath}`, express.static('./phone-catalogue/images'));
 };
 
 module.exports = phonesRoutes;

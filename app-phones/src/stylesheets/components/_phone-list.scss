@@ -1,0 +1,25 @@
+.phone__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: $size-l;
+    width: $main-content-width;
+    margin: 0 auto;
+    padding-bottom: $size-l;
+    @include maxi-mobile{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $size-m;
+        width: 90%;
+    }
+    @include tablet{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $size-l;
+        width: $main-content-width;
+    }
+    @include desktop{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include maxi-desktop{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

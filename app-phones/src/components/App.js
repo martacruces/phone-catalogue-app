@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { fetchPhones } from '../api/Api';
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
+import Header from './Header';
 import PhoneDetail from './PhoneDetail';
 import PhonesList from './PhonesList';
 import SpinnerVeil from './SpinnerVeil';
@@ -37,6 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <Switch>
           <Route path="/" exact>
             <PhonesList allPhones={this.state.allPhones}></PhonesList>

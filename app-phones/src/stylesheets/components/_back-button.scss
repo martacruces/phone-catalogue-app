@@ -1,0 +1,13 @@
+.back-button{
+    margin: 0 0 $size-m;
+    color: $over-primary-color;
+    display: inline-block;
+    font-weight: $font-bold;
+    padding: $size-s $size-m;
+    background-color: $primary-color;
+    border-radius: $size-l;
+    border: 1px solid $terciary-color;
+    &__icon{
+      margin-right: $size-s;
+    }
+}

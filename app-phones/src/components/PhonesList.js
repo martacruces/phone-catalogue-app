@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Phone from './Phone';
 
 const PhonesList = (props) => {
-return <ul className="phones__list">{props.allPhones
+return <ul className="phone__list">{props.allPhones
     .map(phone =>
         <li key={phone.id}>
             <Link to={`/${phone.id}`}>

@@ -1,0 +1,16 @@
+.header{
+    width: 100%;
+    text-align: center;
+    min-height: $size-xl;
+    background-color: $primary-color;
+    border-bottom: $size-xs solid $terciary-color;
+    margin-bottom: $size-l;
+    &__title{
+        margin: 0;
+        font-size: 2rem;
+        color: $secondary-color;
+        font-weight: $font-bold;
+        font-style: italic;
+        padding: $size-m;
+    }
+}

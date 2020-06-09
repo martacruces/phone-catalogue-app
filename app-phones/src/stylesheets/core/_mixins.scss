@@ -1,0 +1,4 @@
+@mixin maxi-mobile { @media all and (min-width: 320px) { @content}};
+@mixin tablet { @media all and (min-width: 480px) { @content}};
+@mixin desktop { @media all and (min-width: 768px) { @content}};
+@mixin maxi-desktop { @media all and (min-width: 1024px) { @content}};
